@@ -9,7 +9,7 @@ namespace Compiler
 {
     class main
     {
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             Scanner scanner = new Scanner("C:/Users/Administrator/Desktop/workspace/Compiler/Compiler/test.txt");
             Console.Write(scanner.Buffer);
@@ -24,6 +24,6 @@ namespace Compiler
             }
             Console.ReadKey();
 
-        } 
+        }*/
     }
 }

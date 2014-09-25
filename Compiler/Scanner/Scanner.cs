@@ -8,32 +8,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 
 namespace Compiler.Common
 {
     class Scanner
     {
-        public int       Line   { get; set; }
-        public int       Row    { get; set; }
-        public int       Cur    { get; set; }
-        public ErrorType error  { get; set; } 
+        public int       Line   { get; set; }  //源程序字符所在行
+        public int       Row    { get; set; }  //源程序字符所在列
+        public int       Cur    { get; set; }  //当前字符
+        public ErrorType error  { get; set; }  //报错错误对象声明
         public String    Buffer { get; set; }
-        public List<TokenType> tokenList = new List<TokenType>();
 
         /*
          *author: Louise
          *date  : 21/09/2014
          *describe: 读取文件到Buffer中
          */
-        public Scanner(string filePath)
+        public Scanner()
         {
-            StreamReader reader = new StreamReader(filePath);
-            Buffer = reader.ReadToEnd();
-            reader.Close();
             Line = 1;
             Row  = 1;
             Cur  = 0;
+            error = new ErrorType();
         }
 
         /*
@@ -43,15 +40,16 @@ namespace Compiler.Common
          */
         public Char getNextChar()
         {
-            if (Cur >= Buffer.Length - 1) return '\0';
+            if (Cur >= Buffer.Length ) return '\0';
 
-            if (Buffer[Cur] == '{')
+            if (Buffer[Cur] == '{')  //忽略注释内容
             {
                 Cur ++;
                 int level = 1;
                 while (level != 0)
                 {
                     Row ++;
+                    //windows下换行不仅仅只有\n,还有\r
                     if (Buffer[Cur] == '\n' || Buffer[Cur] == '\r')
                     {
                         Row = 1;
@@ -73,6 +71,7 @@ namespace Compiler.Common
                 }
                 return getNextChar();
             }
+            //忽略空格，换行符，回车符
             if (Buffer[Cur] == ' ' || Buffer[Cur] == '\n' || Buffer[Cur] == '\r' || Buffer[Cur] == '\t' )
             {
                 while (true)
@@ -90,8 +89,6 @@ namespace Compiler.Common
                 return getNextChar();
             }
             Char character = Buffer[Cur];
-            if (character == '\n') Console.WriteLine( "换行" );
-            Cur ++;
             return character;
         }
 
@@ -149,6 +146,12 @@ namespace Compiler.Common
             return Name;
         }
 
+
+        /*
+         *author: Louise
+         *date  : 25/09/2014
+         *describe: 判断具体是哪个保留字，若都不是就是标识符
+         */
         public LexType isReserved(String name)
         {
             switch (name)
@@ -200,6 +203,35 @@ namespace Compiler.Common
             return LexType.ID;
         }
 
+
+        public LexType recoSymbol( char symbol )
+        {
+            switch (symbol)
+            {
+                case '+':  return LexType.PLUS;
+                case '-':  return LexType.MINUS;
+                case '*':  return LexType.TIMES;
+                case '/':  return LexType.OVER;
+                case '(':  return LexType.LPAREN;
+                case ')':  return LexType.RPAREN;
+                case '.':  return LexType.DOT;
+                case '[':  return LexType.LMIDPAREN;
+                case ']':  return LexType.RMIDPAREN;
+                case ';':  return LexType.SEMI;
+                case ':':  return LexType.COLON;
+                case ',':  return LexType.COMMA;
+                case '<':  return LexType.LT;
+                case '=':  return LexType.EQ;
+                case '\0': return LexType.ENDFILE;
+            }
+            error.Line = Line;
+            error.Row  = Row;
+            error.Type = ErrorType.errorType.LexicalError;
+            error.isError = true;
+            return LexType.ENDFILE;
+        }
+        
+        
         /*
          *author: Louise
          *date  : 23/09/2014
@@ -211,7 +243,9 @@ namespace Compiler.Common
             TokenType Token = new TokenType() ;
             Token.Line = Line;
             Token.Row  = Row ;
+
             entrance = getNextChar();
+
 
             if ((entrance >= 'a' && entrance <='z') || (entrance >= 'A' && entrance <= 'Z'))
             {
@@ -230,17 +264,63 @@ namespace Compiler.Common
                 Token.Data = ":=" ;
                 Token.lexType = LexType.ASSIGN ;
             }
-            else if (entrance == '.' && Buffer[Cur + 1] == '.')
+            else if (entrance == '.' && Cur < Buffer.Length - 1 )
             {
-                Cur += 2; Row += 2;
-                Token.Data = "..";
-                Token.lexType = LexType.UNDERANGE;
+                if (Buffer[Cur + 1] == '.' ) 
+                {
+                    Cur += 2; Row += 2;
+                    Token.Data = "..";
+                    Token.lexType = LexType.UNDERANGE;
+                }
             }
             else
             {
+
+                Token.lexType = recoSymbol( entrance );
+                if( Token.lexType != LexType.ENDFILE ) Token.Data = "" + Buffer[Cur];
+                Cur++;
+                Row++;
             }
 
             return Token;
+        }
+
+        /*
+         *author: Louise
+         *date  : 25/09/2014
+         *describe: 取得TokenList
+         */
+        public List<TokenType> getTokenList( String filePath )
+        {
+            List<TokenType> tokenList = new List<TokenType>();
+            TokenType word;
+
+            StreamReader reader = new StreamReader(filePath); 
+            Buffer = reader.ReadToEnd();
+            reader.Close();
+
+            while (true)
+            {
+                word = getNextToken();
+                if (error.isError) break;
+                tokenList.Add(word);
+                if (word.lexType == LexType.ENDFILE) break;
+            }
+            return tokenList;
+        }
+    }
+
+    class Program
+    {
+        static void Main( string[] args ) 
+        {
+            Scanner scanner = new Scanner();
+            List<TokenType> TokenList = scanner.getTokenList( "../../test.txt" );
+            for (int i = 0; i < TokenList.Count; i++)
+            {
+                Console.WriteLine( TokenList[i].Data + " " + TokenList[i].lexType);
+            } 
+            Console.ReadKey();
         }
     }
 }
