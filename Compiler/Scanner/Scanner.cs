@@ -8,9 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Compiler.Common;
 //using System.Collections.Generic;
 
-namespace Compiler.Common
+namespace Compiler.Scanner
 {
     class Scanner
     {
@@ -156,7 +157,7 @@ namespace Compiler.Common
         {
             switch (name)
             {
-                case "program": 
+                case "program":
                     return LexType.PROGRAM;
                 case "type":
                     return LexType.TYPE;
@@ -204,7 +205,7 @@ namespace Compiler.Common
         }
 
 
-        public LexType recoSymbol( char symbol )
+        public LexType recoSymbol(char symbol)
         {
             switch (symbol)
             {
@@ -262,7 +263,7 @@ namespace Compiler.Common
             {
                 Cur += 2; Row += 2; 
                 Token.Data = ":=" ;
-                Token.lexType = LexType.ASSIGN ;
+                Token.lexType = LexType.ASSIGN;
             }
             else if (entrance == '.' && Cur < Buffer.Length - 1 )
             {
@@ -277,7 +278,7 @@ namespace Compiler.Common
             {
 
                 Token.lexType = recoSymbol( entrance );
-                if( Token.lexType != LexType.ENDFILE ) Token.Data = "" + Buffer[Cur];
+                if (Token.lexType != LexType.ENDFILE) Token.Data = "" + Buffer[Cur];
                 Cur++;
                 Row++;
             }
