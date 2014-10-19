@@ -8,5 +8,6 @@ namespace Compiler.Common
 {
     class Product
     {
+       
     }
 }

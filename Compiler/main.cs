@@ -9,21 +9,20 @@ namespace Compiler
 {
     class main
     {
-        /*static void Main(string[] args)
+        static void Main(string[] args)
         {
-            Scanner scanner = new Scanner("C:/Users/Administrator/Desktop/workspace/Compiler/Compiler/test.txt");
-            Console.Write(scanner.Buffer);
-            Console.ReadKey();
-            Console.WriteLine();
-            Char character = '.';
-            while (character != '\0')
+            Predict predict = new Predict("../../Predict.txt");
+            Console.WriteLine( predict.predicts.Count );
+            for (int i = 0; i < predict.predicts.Count; i++)
             {
-                character = scanner.getNextChar();
-                if (character == '\n') Console.WriteLine( "换行" );
-                Console.WriteLine(character);
+                String output = "" ;
+                for (int j = 0; j < predict.predicts[i].Count; j++)
+                {
+                    output += predict.predicts[i][j] + " ";
+                }
+                Console.WriteLine(output); 
             }
             Console.ReadKey();
-
-        }*/
+        }
     }
 }

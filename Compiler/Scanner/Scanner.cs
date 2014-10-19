@@ -13,7 +13,7 @@ using Compiler.Common;
 
 namespace Compiler.Scanner
 {
-    class Scanner
+    class scanner
     {
         public int       Line   { get; set; }  //源程序字符所在行
         public int       Row    { get; set; }  //源程序字符所在列
@@ -26,7 +26,7 @@ namespace Compiler.Scanner
          *date  : 21/09/2014
          *describe: 读取文件到Buffer中
          */
-        public Scanner()
+        public scanner()
         {
             Line = 1;
             Row  = 1;
@@ -204,7 +204,11 @@ namespace Compiler.Scanner
             return LexType.ID;
         }
 
-
+        /*
+         *author: Louise
+         *date  : 25/09/2014
+         *describe: 判断具体是哪个符号
+         */
         public LexType recoSymbol(char symbol)
         {
             switch (symbol)
@@ -311,17 +315,17 @@ namespace Compiler.Scanner
         }
     }
 
-    class Program
+    /*class Program
     {
         static void Main( string[] args ) 
         {
-            Scanner scanner = new Scanner();
-            List<TokenType> TokenList = scanner.getTokenList( "../../test.txt" );
+            scanner scan = new scanner();
+            List<TokenType> TokenList = scan.getTokenList( "../../test.txt" );
             for (int i = 0; i < TokenList.Count; i++)
             {
                 Console.WriteLine( TokenList[i].Data + " " + TokenList[i].lexType);
             } 
             Console.ReadKey();
         }
-    }
+    }*/
 }
