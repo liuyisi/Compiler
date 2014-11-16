@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ *author: Louise
+ *date  : 16/10/2014
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,22 +13,37 @@ namespace Compiler.Common
 {
     class Predict
     {
-        public List< List<LexType> > predicts{ get; set; }
+        public List< List<LexType> > predicts{ get; set; }  // predict集合
 
         String buffer;
         int Cur ;
 
+        /*
+         *author: Louise
+         *date  : 16/10/2014
+         *describe: 构造函数
+         */
         public Predict()
         {
             predicts = new List<List<LexType>>();
         }
 
+         /*
+          *author: Louise
+          *date  : 16/10/2014
+          *describe: 构造函数(使用filepath来构造)
+          */
         public Predict( String filePath )
         {
             predicts = new List<List<LexType>>();
             getPredict(filePath);
         }
 
+        /*
+         *author: Louise
+         *date  : 16/10/2014
+         *describe: 取得predict集合
+         */
         public void getPredict(String filePath)
         {
             StreamReader reader = new StreamReader(filePath);
@@ -39,6 +58,11 @@ namespace Compiler.Common
             }
         }
 
+        /*
+         *author: Louise
+         *date  : 16/10/2014
+         *describe: 取得一个predict
+         */
         private List<LexType> getOnePredict()
         {
             List<LexType> onePredict = new List<LexType>();
@@ -61,7 +85,12 @@ namespace Compiler.Common
             return onePredict;
         }
 
-        public LexType recoTerminal(String terminal)
+        /*
+         *author: Louise
+         *date  : 16/10/2014
+         *describe: 辨认是那个终极符
+         */
+        private LexType recoTerminal(String terminal)
         {   
             switch( terminal )
             {

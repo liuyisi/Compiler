@@ -30,6 +30,8 @@ namespace Compiler.Common
         ASSIGN, EQ, LT, PLUS, MINUS, TIMES, OVER, LPAREN, RPAREN, DOT, COLON, SEMI, COMMA, LMIDPAREN,
         RMIDPAREN, UNDERANGE
     };
+
+    /*非终极符*/
     enum nonTerminals
     {
         Program,     ProgramHead,   ProgramName,    DeclarePart, TypeDecpart,  
