@@ -23,14 +23,14 @@ namespace Compiler.Common
          *date  : 16/11/2014
          *describe: product产生式中的元素
          */
-        class ProductElement
+        public class ProductElement
         {
             public bool IsTerminal;             //true 代表是终极符 false代表是非终极符
             public nonTerminals NonTerminal;    //非终极符
             public LexType Terminal;            //终极符
         }
 
-        public List<List<ProductElement> > product { get; set; }  // product集合
+        public List< List<ProductElement> > product { get; set; }  // product集合
 
         String buffer;
         int Cur;

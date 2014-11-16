@@ -47,8 +47,7 @@ namespace Compiler.Common
         ActParamMore,RelExp,        OtherRelE,      Exp,         OtherTerm,  
         Term,        OtherFactor,   Factor,         Variable,    VariMore,    FieldVar,  
         FieldVarMore,CmpOp,         AddOp,          MultOp
-    };  
-    
+    };
     
     enum nodeKind {  
         ProK ,  PheadK , TypeK , VarK , ProcDecK , StmLK , DecK , StmtK , ExpL 

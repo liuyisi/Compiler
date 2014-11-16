@@ -11,14 +11,17 @@ namespace Compiler
     {
         static void Main(string[] args)
         {
-            Predict predict = new Predict("../../Predict.txt");
-            Console.WriteLine( predict.predicts.Count );
-            for (int i = 0; i < predict.predicts.Count; i++)
+            Product products = new Product("../../Product.txt");
+            int count = products.product.Count ;
+            Console.WriteLine(products.product.Count);
+            for (int i = 0; i < products.product.Count; i++)
             {
                 String output = "" ;
-                for (int j = 0; j < predict.predicts[i].Count; j++)
+                for (int j = 0; j < products.product[i].Count; j++)
                 {
-                    output += predict.predicts[i][j] + " ";
+                    if (products.product[i][j].IsTerminal == true)
+                        output += products.product[i][j].Terminal + " ";
+                    else output += products.product[i][j].NonTerminal + " "; 
                 }
                 Console.WriteLine(output); 
             }
