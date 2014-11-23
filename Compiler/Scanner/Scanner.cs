@@ -311,8 +311,10 @@ namespace Compiler.Scanner
                 tokenList.Add(word);
                 if (word.lexType == LexType.ENDFILE) break;
             }
+            if (error.isError) error.output();
             return tokenList;
         }
+
     }
 
     /*class Program

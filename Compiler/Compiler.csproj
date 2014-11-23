@@ -42,9 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ErrorType.cs" />
-    <Compile Include="Common\Predict.cs" />
-    <Compile Include="Common\Product.cs" />
-    <Compile Include="Common\TokenType.cs" />
+    <Compile Include="Parser\Predict.cs" />
+    <Compile Include="Parser\Product.cs" />
+    <Compile Include="Common\TreeNode.cs" />
+    <Compile Include="Scanner\TokenType.cs" />
     <Compile Include="Common\Enum.cs" />
     <Compile Include="main.cs" />
     <Compile Include="Parser\Parser.cs" />

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Compiler.Common;
+using Compiler.Scanner;
+using Compiler.Parser;
 
 namespace Compiler
 {

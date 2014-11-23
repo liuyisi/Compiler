@@ -24,5 +24,23 @@ namespace Compiler.Common
             SemanticError    //语义错误
         } ;
         public errorType Type ;
+
+        /*错误输出*/
+        public void output()
+        {
+            if (Type == errorType.LexicalError)
+            {
+                Console.Write( "词法错误:" );
+            }
+            else if (Type == errorType.SyntaxError)
+            {
+                Console.Write( "语法错误" );
+            }
+            else if (Type == errorType.SemanticError)
+            {
+                Console.Write( "语义错误" );
+            }
+            Console.WriteLine( "         行：" + Line + "       列：" + Row );
+        }
     }
 }
