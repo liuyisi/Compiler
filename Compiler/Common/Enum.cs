@@ -18,17 +18,21 @@ namespace Compiler.Common
         ENDFILE, ERROR, 
         
         /*保留字*/
-        PROGRAM, PROCEDURE, TYPE, VAR, IF, THEN, ELSE, FI, WHILE, DO, ENDWH,
-        BEGINI, ENDI, READ, WRITE, ARRAY, OF, RECORD, RETURN1,
+        PROGRAM, PROCEDURE, TYPE, VAR, IF,
+        THEN, ELSE, FI, WHILE, DO,
+        ENDWH, BEGIN, END, READ, WRITE,
+        ARRAY, OF, RECORD, RETURN,  
         //类型
-        INTERGER, CHAR1,
+        INTEGER, CHAR,
 
         /*多字符单词符号*/
-        ID, INTC, CHARC,
+        ID,          INTC,          CHARC, 
 
         /*特殊符号*/
-        ASSIGN, EQ, LT, PLUS, MINUS, TIMES, OVER, LPAREN, RPAREN, DOT, COLON, SEMI, COMMA, LMIDPAREN,
-        RMIDPAREN, UNDERANGE
+        ASSIGN,      EQ,            LT,             PLUS,        MINUS,  
+        TIMES,       OVER,          LPAREN,         RPAREN,      DOT,  
+        COLON,       SEMI,          COMMA,          LMIDPAREN,   RMIDPAREN,  
+        UNDERANGE 
     };
 
     /*非终极符*/

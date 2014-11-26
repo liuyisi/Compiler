@@ -8,9 +8,9 @@ using Compiler.Common;
 
 namespace Compiler.Parser
 {
-    class Parser
+    class parser
     {
-        public Parser()
+        public parser()
         {
             SNLScanner = new scanner() ;
             SNLPredict = new Predict("../../Predict.txt") ;
@@ -77,7 +77,7 @@ namespace Compiler.Parser
             }
             else
             {
-                for (int i = 0; i < SNLProduct.product[choose].Count; i++)
+                for (int i = 1 ; i < SNLProduct.product[choose].Count; i++)
                 {
                     if (SNLProduct.product[choose][i].IsTerminal == true)
                     {

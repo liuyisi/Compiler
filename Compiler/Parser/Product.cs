@@ -71,7 +71,8 @@ namespace Compiler.Parser
 
             while (Cur < buffer.Length)
             {
-                product.Add( getOneProduct() );
+                List<ProductElement> element = getOneProduct();
+                if( element.Count > 0 ) product.Add( element );
             }
         }
 
@@ -86,11 +87,19 @@ namespace Compiler.Parser
 
             while (true)
             {
+                if (Cur >= buffer.Length) break;
+                if (buffer[Cur] == '\n' || buffer[Cur] == '\r') break;
+                if (buffer[Cur] == ' ')
+                {
+                    Cur++;
+                    continue;
+                }
+
                 int start = Cur;
                 ProductElement Element = new ProductElement();
                 Element.IsTerminal = false ;
-
                 String data ;
+
                 while (buffer[Cur] != ' ' && buffer[Cur] != '\n' && buffer[Cur] != '\r' && Cur < buffer.Length)
                 {
                     Cur++;
@@ -98,15 +107,18 @@ namespace Compiler.Parser
                 }
                 data = buffer.Substring(start, Cur - start);
 
-                if (data.Equals("=")) continue;
+
+                if (data.CompareTo( "=" ) == 0 )
+                {
+                     Cur++;
+                     continue;
+                }
 
                 Element.NonTerminal = recoNonTerminal( data , Element ) ;
-                Element.Terminal = recoTerminal(data);
+                if( Element.IsTerminal == true ) Element.Terminal = recoTerminal(data);
                 product.Add(Element);
 
                 Cur++;
-                if (Cur >= buffer.Length) break;
-                if (buffer[Cur] == '\n' || buffer[Cur] == '\r') break;
             }
             Cur++;
 
@@ -191,7 +203,7 @@ namespace Compiler.Parser
                 case "AddOp":           return nonTerminals.AddOp;
                 case "MultOp":          return nonTerminals.MultOp;
             }
-            Element.IsTerminal = false;
+            Element.IsTerminal = true;
             return nonTerminals.Program;
         }
 
@@ -217,16 +229,16 @@ namespace Compiler.Parser
                 case "WHILE":     return LexType.WHILE;
                 case "DO":        return LexType.DO;
                 case "ENDWH":     return LexType.ENDWH;
-                case "BEGIN":     return LexType.BEGINI;
-                case "ENDI":      return LexType.ENDI;
+                case "BEGIN":     return LexType.BEGIN;
+                case "END":      return LexType.END;
                 case "READ":      return LexType.READ;
                 case "WRITE":     return LexType.WRITE;
                 case "ARRAY":     return LexType.ARRAY;
                 case "OF":        return LexType.OF;
                 case "RECORD":    return LexType.RECORD;
-                case "RETURN1":   return LexType.RETURN1;
-                case "INTERGER":  return LexType.INTERGER;
-                case "CHAR1":     return LexType.CHAR1;
+                case "RETURN":   return LexType.RETURN;
+                case "INTEGER":  return LexType.INTEGER;
+                case "CHAR":     return LexType.CHAR;
                 case "ID":        return LexType.ID;
                 case "INTC":      return LexType.INTC;
                 case "CHARC":     return LexType.CHARC;
@@ -247,7 +259,6 @@ namespace Compiler.Parser
                 case "RMIDPAREN": return LexType.RMIDPAREN;
                 case "UNDERANGE": return LexType.UNDERANGE;
             }
-
             return LexType.ENDFILE;
         }
     }

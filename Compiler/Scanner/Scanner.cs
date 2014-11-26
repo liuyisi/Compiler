@@ -166,9 +166,9 @@ namespace Compiler.Scanner
                 case "procedure":
                     return LexType.PROCEDURE;
                 case "begin":
-                    return LexType.BEGINI;
+                    return LexType.BEGIN;
                 case "end":
-                    return LexType.ENDI;
+                    return LexType.END;
                 case "array":
                     return LexType.ARRAY;
                 case "of":
@@ -194,11 +194,11 @@ namespace Compiler.Scanner
                 case "write":
                     return LexType.WRITE;
                 case "return":
-                    return LexType.RETURN1;
+                    return LexType.RETURN;
                 case "integer":
-                    return LexType.INTERGER;
+                    return LexType.INTEGER;
                 case "char":
-                    return LexType.CHAR1;
+                    return LexType.CHAR;
 
             }
             return LexType.ID;
