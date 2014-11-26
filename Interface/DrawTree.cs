@@ -21,7 +21,7 @@ namespace Interface
     public static class DrawTree
     {
         static int X  ;
-        static int Space = 30;
+        static int Space = 12;
         static int PanelWidth , PanelHigh;
 
         /*显示树结构*/
@@ -31,8 +31,6 @@ namespace Interface
             PanelWidth = 0;
             PanelHigh = 0;
             InitTree(root, 20);
-            //PanelWidth = X;
-            //PanelHigh = Depth;
             canvas.Height = PanelHigh + 50 ;
             canvas.Width = PanelWidth + 50 ;
             draw( root , DC );
@@ -48,7 +46,7 @@ namespace Interface
             {
                 if (root.IsTerminal == true) str += root.Data;
                 else str += root.NonTerminal;
-                Length = str.Length * 8;
+                Length = str.Length * 7;
                 width = Length + Space;
                 root.Length = Length;
                 root.Width = width;
@@ -61,7 +59,7 @@ namespace Interface
             else
             {
                 str += root.NonTerminal;
-                Length = str.Length * 8;
+                Length = str.Length * 7;
                 root.Length = Length;
                 root.y = Y;
                 temp = X;
@@ -85,9 +83,9 @@ namespace Interface
             Pen drawingPen = new Pen(Brushes.Black, 1);
 
             Point point1 = new Point( root.x , root.y );
-            Point point2 = new Point( root.x + root.Length, root.y);
-            Point point3 = new Point( root.x + root.Length, root.y + 20);
-            Point point4 = new Point( root.x , root.y + 20 );
+            Point point2 = new Point( root.x + root.Length , root.y);
+            Point point3 = new Point( root.x + root.Length , root.y + 15);
+            Point point4 = new Point( root.x , root.y + 15 );
 
             DC.DrawLine( drawingPen , point1 , point2 );
             DC.DrawLine( drawingPen , point2 , point3 );
@@ -97,16 +95,16 @@ namespace Interface
 
             if (root.IsTerminal == true)
             {
-                FormattedText text = new FormattedText("" + root.Data, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Verdana"), 10, Brushes.Black);
-                DC.DrawText( text , new Point( root.x + 2 , root.y ) ) ;
+                FormattedText text = new FormattedText("" + root.Data, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Verdana"), 9, Brushes.Black);
+                DC.DrawText( text , new Point( root.x + 1 , root.y ) ) ;
             }
             else
             {
-                FormattedText text = new FormattedText("" + root.NonTerminal, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Verdana"), 10, Brushes.Black);
-                DC.DrawText(text, new Point(root.x + 2, root.y));
+                FormattedText text = new FormattedText("" + root.NonTerminal, CultureInfo.GetCultureInfo("en-us"), FlowDirection.LeftToRight, new Typeface("Verdana"), 9, Brushes.Black);
+                DC.DrawText(text, new Point(root.x + 1, root.y));
                 for (int i = 0; i < root.ChildNum; i++)
                 {
-                    DC.DrawLine( drawingPen , new Point( root.x + root.Length/2 , root.y + 20 ) , new Point( root.childs[i].x + root.childs[i].Length / 2 , root.childs[i].y)  );
+                    DC.DrawLine( drawingPen , new Point( root.x + root.Length/2 , root.y + 15 ) , new Point( root.childs[i].x + root.childs[i].Length / 2 , root.childs[i].y)  );
                     draw(root.childs[i], DC);
                 }
             }

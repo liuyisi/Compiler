@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Interface"
         
-        Title="语法分析树" Height="500" Width="500">
+        Title="语法分析树" Height="900" Width="1200">
     <Grid>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" >
             <local:DrawingCanvas x:Name="Test" >
