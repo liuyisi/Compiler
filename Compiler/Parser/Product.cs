@@ -17,7 +17,7 @@ namespace Compiler.Parser
      *date  : 16/11/2014
      *describe: product集合
      */
-    class Product
+    public class Product
     {
         /*
          *author: Louise

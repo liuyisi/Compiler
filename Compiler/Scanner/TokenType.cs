@@ -16,7 +16,7 @@ namespace Compiler.Scanner
      *date  : 21/09/2014
      *describe : 描述token的数据结构
      */
-    class TokenType
+    public class TokenType
     {
         public int Line{ get; set; }
         public int Row { get; set; }

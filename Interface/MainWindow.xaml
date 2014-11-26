@@ -1,0 +1,13 @@
+﻿<Window x:Class="Interface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Interface"
+        
+        Title="语法分析树" Height="500" Width="500">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" >
+            <local:DrawingCanvas x:Name="Test" >
+            </local:DrawingCanvas>
+        </ScrollViewer>
+    </Grid>
+</Window>

@@ -8,7 +8,7 @@ using Compiler.Common;
 
 namespace Compiler.Parser
 {
-    class parser
+    public class parser
     {
         public parser()
         {

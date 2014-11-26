@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Compiler.Common
 {
     /*LexType是终极符*/
-    enum LexType 
+    public enum LexType 
     {
         /*簿记单词符号*/
         ENDFILE, ERROR, 
@@ -36,7 +36,7 @@ namespace Compiler.Common
     };
 
     /*非终极符*/
-    enum nonTerminals
+    public enum nonTerminals
     {
         Program,     ProgramHead,   ProgramName,    DeclarePart, TypeDecpart,  
         TypeDec,     TypeDecList,   TypeDecMore,    TypeId,      TypeDef,  
@@ -53,34 +53,34 @@ namespace Compiler.Common
         FieldVarMore,CmpOp,         AddOp,          MultOp
     };
     
-    enum nodeKind {  
+    public enum nodeKind {  
         ProK ,  PheadK , TypeK , VarK , ProcDecK , StmLK , DecK , StmtK , ExpL 
     };
-    enum decKind {  
+    public enum decKind {  
         ArrayK , CharK , IntegerK , RecordK , IdK 
     };
-    enum stmtKind {  
+    public enum stmtKind {  
         IfK , WhileK , AssignK , ReadK , WriteK , CallK , ReturnK
     };
-    enum expKind {  
+    public enum expKind {  
         OpK , ConstK , VariK 
     };
-    enum varKind {  
+    public enum varKind {  
         IdV , ArrayMembV , FieldMembV 
     };
-    enum expType {  
+    public enum expType {  
         Void , Integer , Boolean 
     };
-    enum paramType {  
+    public enum paramType {  
         ValParamType , VarparamType
     };
-    enum TypeKind {
+    public enum TypeKind {
         intTy , charTy , boolTy , arrayTy , fieldTy
     };
-    enum IdKind {
+    public enum IdKind {
         varkind , typekind , prockind 
     };
-    enum AccessKind{
+    public enum AccessKind{
         dir , indir 
     };
 }

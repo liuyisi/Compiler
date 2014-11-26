@@ -13,7 +13,7 @@ using Compiler.Scanner;
 
 namespace Compiler.Parser
 {
-    class Predict
+    public class Predict
     {
         public List< List<LexType> > predicts{ get; set; }  // predict集合
 

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Compiler.Common
 {
-    class ErrorType
+    public class ErrorType
     {
         public int Line { get; set; }
         public int Row  { get; set; }
