@@ -34,18 +34,18 @@ namespace Interface
             parser Parser = new parser();
             TreeNode root = Parser.getTree("../../source.txt");
 
-            DrawingVisual visual = new DrawingVisual();
-            DrawingContext dc = visual.RenderOpen();
+            if (Parser.error.isError == false)
+            {
+                DrawingVisual visual = new DrawingVisual();
+                DrawingContext dc = visual.RenderOpen();
 
-            DrawTree.DisplayTree(root, dc , Test );
+                DrawTree.DisplayTree(root, dc, Test);
 
-            Pen drawingPen = new Pen(Brushes.Black, 2);
-            //dc.DrawLine(drawingPen, new Point(0, 0), new Point(1000, 1000));
+                //Pen drawingPen = new Pen(Brushes.Black, 2);
 
-            //Test.Height = 6000;
-            //Test.Width = 6000;
-            Test.AddVisual(visual);
-            dc.Close();
+                Test.AddVisual(visual);
+                dc.Close();
+            }
         }
     }
 }

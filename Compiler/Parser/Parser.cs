@@ -31,7 +31,11 @@ namespace Compiler.Parser
         {
             TreeNode root = null ;
             TokenList = SNLScanner.getTokenList(filePath) ;
-            if (SNLScanner.error.isError == true) return root ;
+            if (SNLScanner.error.isError == true)
+            {
+                error.isError = true;
+                return root;
+            }
 
             root = match(nonTerminals.Program, null );
 
