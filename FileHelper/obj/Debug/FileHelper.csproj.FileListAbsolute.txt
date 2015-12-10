@@ -1,0 +1,10 @@
+D:\Projects\SNL Compiler\FileHelper\bin\Debug\FileHelper.dll
+D:\Projects\SNL Compiler\FileHelper\bin\Debug\FileHelper.pdb
+D:\Projects\SNL Compiler\FileHelper\obj\Debug\FileHelper.csprojResolveAssemblyReference.cache
+D:\Projects\SNL Compiler\FileHelper\obj\Debug\FileHelper.dll
+D:\Projects\SNL Compiler\FileHelper\obj\Debug\FileHelper.pdb
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\FileHelper\bin\Debug\FileHelper.dll
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\FileHelper\bin\Debug\FileHelper.pdb
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\FileHelper\obj\Debug\FileHelper.csprojResolveAssemblyReference.cache
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\FileHelper\obj\Debug\FileHelper.dll
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\FileHelper\obj\Debug\FileHelper.pdb

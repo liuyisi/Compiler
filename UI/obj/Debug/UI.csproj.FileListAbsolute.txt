@@ -1,0 +1,81 @@
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\bin\Debug\UI.exe.config
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\bin\Debug\UI.exe
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\bin\Debug\UI.pdb
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\obj\Debug\MainWindow.baml
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\obj\Debug\MainWindow.g.cs
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\obj\Debug\App.g.cs
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\obj\Debug\UI_MarkupCompile.cache
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\obj\Debug\UI.g.resources
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\obj\Debug\UI.exe
+C:\Users\zyt\documents\visual studio 2013\Projects\SNL Compiler\UI\obj\Debug\UI.pdb
+C:\Users\zyt\Documents\Visual Studio 2013\Projects\SNL Compiler\UI\obj\Debug\Views\InputBox.baml
+C:\Users\zyt\Documents\Visual Studio 2013\Projects\SNL Compiler\UI\obj\Debug\Views\NewFile.baml
+C:\Users\zyt\Documents\Visual Studio 2013\Projects\SNL Compiler\UI\obj\Debug\Views\NewFolder.baml
+C:\Users\zyt\Documents\Visual Studio 2013\Projects\SNL Compiler\UI\obj\Debug\Views\InputBox.g.cs
+C:\Users\zyt\Documents\Visual Studio 2013\Projects\SNL Compiler\UI\obj\Debug\Views\NewFile.g.cs
+C:\Users\zyt\Documents\Visual Studio 2013\Projects\SNL Compiler\UI\obj\Debug\Views\NewFolder.g.cs
+D:\Projects\SNL Compiler\UI\bin\Debug\UI.exe.config
+D:\Projects\SNL Compiler\UI\obj\Debug\UI.exe
+D:\Projects\SNL Compiler\UI\obj\Debug\UI.pdb
+D:\Projects\SNL Compiler\UI\bin\Debug\UI.exe
+D:\Projects\SNL Compiler\UI\bin\Debug\UI.pdb
+D:\Projects\SNL Compiler\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+D:\Projects\SNL Compiler\UI\obj\Debug\MainWindow.baml
+D:\Projects\SNL Compiler\UI\obj\Debug\Views\InputBox.baml
+D:\Projects\SNL Compiler\UI\obj\Debug\Views\NewFile.baml
+D:\Projects\SNL Compiler\UI\obj\Debug\Views\NewFolder.baml
+D:\Projects\SNL Compiler\UI\obj\Debug\MainWindow.g.cs
+D:\Projects\SNL Compiler\UI\obj\Debug\Views\InputBox.g.cs
+D:\Projects\SNL Compiler\UI\obj\Debug\Views\NewFile.g.cs
+D:\Projects\SNL Compiler\UI\obj\Debug\Views\NewFolder.g.cs
+D:\Projects\SNL Compiler\UI\obj\Debug\App.g.cs
+D:\Projects\SNL Compiler\UI\obj\Debug\UI_MarkupCompile.cache
+D:\Projects\SNL Compiler\UI\obj\Debug\UI.g.resources
+D:\Projects\SNL Compiler\UI\obj\Debug\UI.Properties.Resources.resources
+D:\Projects\SNL Compiler\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+D:\Projects\SNL Compiler\UI\bin\Debug\FileHelper.dll
+D:\Projects\SNL Compiler\UI\bin\Debug\FileHelper.pdb
+C:\Users\lenovo\Desktop\SNL Compiler\UI\bin\Debug\UI.exe.config
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\UI.exe
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\UI.pdb
+C:\Users\lenovo\Desktop\SNL Compiler\UI\bin\Debug\UI.exe
+C:\Users\lenovo\Desktop\SNL Compiler\UI\bin\Debug\UI.pdb
+C:\Users\lenovo\Desktop\SNL Compiler\UI\bin\Debug\FileHelper.dll
+C:\Users\lenovo\Desktop\SNL Compiler\UI\bin\Debug\FileHelper.pdb
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\MainWindow.baml
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\Views\InputBox.baml
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\Views\NewFile.baml
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\Views\NewFolder.baml
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\MainWindow.g.cs
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\Views\InputBox.g.cs
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\Views\NewFile.g.cs
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\Views\NewFolder.g.cs
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\App.g.cs
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\UI_MarkupCompile.cache
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\UI.g.resources
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\lenovo\Desktop\SNL Compiler\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\bin\Debug\UI.exe.config
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\UI.exe
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\UI.pdb
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\bin\Debug\UI.exe
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\bin\Debug\UI.pdb
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\bin\Debug\FileHelper.dll
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\bin\Debug\FileHelper.pdb
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\MainWindow.baml
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\Views\InputBox.baml
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\Views\NewFile.baml
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\Views\NewFolder.baml
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\MainWindow.g.cs
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\Views\InputBox.g.cs
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\Views\NewFile.g.cs
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\Views\NewFolder.g.cs
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\App.g.cs
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\UI_MarkupCompile.cache
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\UI.g.resources
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\UI.Properties.Resources.resources
+E:\大三上学期\SNL课程\snl准备材料\SNL Compiler\UI\obj\Debug\UI.csproj.GenerateResource.Cache
